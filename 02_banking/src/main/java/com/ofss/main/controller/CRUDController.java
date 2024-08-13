@@ -16,8 +16,10 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.ofss.main.domain.Account;
 import com.ofss.main.domain.Customer;
+import com.ofss.main.domain.Transaction;
 import com.ofss.main.service.AccountService;
 import com.ofss.main.service.CustomerService;
+import com.ofss.main.service.TransactionService;
 
 @RequestMapping("customerapi")
 @RestController
@@ -28,6 +30,9 @@ public class CRUDController {
 	
 	@Autowired
 	private AccountService acc;
+	
+	@Autowired
+	private TransactionService ser;
 	
 	
 	@CrossOrigin(origins = "*")
@@ -61,5 +66,19 @@ public class CRUDController {
 	public boolean deposit(@RequestBody Account body) {
 		return acc.updateBalance(body);
 	}
+	
+	@CrossOrigin(origins = "*")
+	@PutMapping("transfer")
+	public boolean transfer(@RequestBody List<Account> accounts) {
+		return acc.transfer(accounts);
+	}
+	
+	@CrossOrigin(origins = "*")
+	@GetMapping("alltransactions/{id}")
+	public List<Transaction> transaction(@PathVariable int id) {
+		return ser.getAllTransaction(id);
+	}
+
+
 	
 }
