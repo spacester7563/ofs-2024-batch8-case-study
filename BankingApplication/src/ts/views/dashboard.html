@@ -1,0 +1,23 @@
+<!--
+ Copyright (c) 2014, 2024, Oracle and/or its affiliates.
+ Licensed under The Universal Permissive License (UPL), Version 1.0
+ as shown at https://oss.oracle.com/licenses/upl/
+ -->
+<div class="oj-hybrid-padding" id="containerDiv">
+  <h3>Login</h3>
+  <oj-c-form-layout max-columns="1" direction="column">
+  <div>
+    <oj-c-input-text id="text-input" label-hint="Email" label-edge="inside" value="{{email}}"></oj-c-input-text>
+  </div>
+
+  <div>
+    <oj-c-input-password clear-icon="always" value="{{password}}" min="0" step="0"
+      label-hint="Password"></oj-c-input-password>
+  </div>
+  <oj-button id="button1" on-oj-action="[[buttonAction]]">Login</oj-button>
+  <oj-c-message-toast
+  data="[[messages]]"
+  on-oj-close="[[closeMessage]]"></oj-c-message-toast>
+</oj-c-form-layout>
+
+</div>

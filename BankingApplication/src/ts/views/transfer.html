@@ -1,0 +1,20 @@
+<!-- 
+Copyright (c) 2014, 2024, Oracle and/or its affiliates.
+Licensed under The Universal Permissive License (UPL), Version 1.0
+as shown at https://oss.oracle.com/licenses/upl/
+-->
+<div class="oj-hybrid-padding" id="containerDiv">
+    <h3>Money Transfer</h3>
+    <oj-c-form-layout max-columns="1" direction="column">
+        <oj-c-input-number label-hint="Receiver Id" id="balance" value="{{receiver}}" >
+        </oj-c-input-number>
+        <oj-c-input-number label-hint="Sender Id" id="balance" value="{{sender}}" >
+        </oj-c-input-number>
+
+        <oj-c-input-number label-hint="Amount" id="balance" value="{{balance}}" input-prefix="$">
+        </oj-c-input-number>
+
+        <oj-button id="button1" on-oj-action="[[buttonAction]]">Transfer</oj-button>
+        <oj-c-message-toast data="[[messages]]" on-oj-close="[[closeMessage]]"></oj-c-message-toast>
+    </oj-c-form-layout>
+</div>

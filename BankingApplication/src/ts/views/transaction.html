@@ -1,0 +1,21 @@
+<!--
+ Copyright (c) 2014, 2024, Oracle and/or its affiliates.
+ Licensed under The Universal Permissive License (UPL), Version 1.0
+ as shown at https://oss.oracle.com/licenses/upl/
+ -->
+<div class="oj-hybrid-padding">
+  <h3>Transactions</h3>
+
+  <oj-table id="table" aria-label="Transactions Table" accessibility.row-header="depName" data="[[dataprovider]]"
+    dnd='{"reorder": {"columns": "enabled"}}' scroll-policy="loadMoreOnScroll" scroll-policy-options='{"fetchSize": 10}'
+    columns='[{"headerText": "Account Id", "field": "accountId", "resizable": "enabled", "id": "depId"},
+             {"headerText": "Amount", "field": "amount", "resizable": "enabled", "id": "depName"},
+             {"headerText": "Customer Id", "field": "customerId", "resizable": "enabled", "id": "locId"},
+             {"headerText": "Payment Date", "field": "paymentDate", "resizable": "enabled", "id": "intId"},
+             {"headerText": "Payment Id", "field": "paymentId", "resizable": "enabled", "id": "manId"},
+             {"headerText": "Receiver Id", "field": "receiverId", "resizable": "enabled", "id": "empCount"}]'
+    class="demo-table-container">
+  </oj-table>
+
+
+</div>

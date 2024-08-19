@@ -1,0 +1,28 @@
+<div class="oj-hybrid-padding" id="containerDiv">
+  <h3>Create Bank Account</h3>
+  <oj-c-form-layout max-columns="1" direction="column">
+
+    <!-- Bind radioset value and options to ViewModel -->
+    <oj-c-radioset
+    id="radiosetBasicDemoId"
+    label-hint="Account Type"
+    label-edge="inside"
+    options="[[colorOptions]]"
+    value="{{currentColor}}">
+  </oj-c-radioset>
+  
+    
+    <!-- Input number for balance -->
+    <oj-c-input-number label-hint="Balance" id="balance" value="{{balance}}" input-prefix="$">
+    </oj-c-input-number>
+    
+    <!-- Button with action binding -->
+    <oj-button id="button1" on-oj-action="[[buttonAction]]">Add Account</oj-button>
+
+    <!-- Message toast component -->
+    <oj-c-message-toast
+      data="[[messages]]"
+      on-oj-close="[[closeMessage]]">
+    </oj-c-message-toast>
+  </oj-c-form-layout>
+</div>
